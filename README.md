@@ -51,8 +51,8 @@ STM32CubeIDE project see the instructions described in the follow.
 
 * Create a new directory for the CMSIS Core header files and move the CMSIS core files shipped with Mbed:
   ```
-  mkdir -p ~/TensorFlow/tensorflow/lite/micro/micro/tools/make/downloads/cmsis/CMSIS/Core/Include
-  cp ./mbed-os/cmsis/TARGET_CORTEX_M/*.h ~/TensorFlow/tensorflow/lite/micro/micro/tools/make/downloads/cmsis/CMSIS/Core/Include/
+  mkdir -p ~/TensorFlow/tensorflow/lite/micro/tools/make/downloads/cmsis/CMSIS/Core/Include
+  cp ./mbed-os/cmsis/TARGET_CORTEX_M/*.h ~/TensorFlow/tensorflow/lite/micro/tools/make/downloads/cmsis/CMSIS/Core/Include/
   ```
   
   Alternatively, you can also use the CMSIS Core files for Cortex-M that are shipped with a STM32CubeIDE project in `Drivers/CMSIS/Include`, 
