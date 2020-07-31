@@ -51,8 +51,8 @@ STM32CubeIDE project see the instructions described in the follow.
 
 * Create a new directory for the CMSIS Core header files and move the CMSIS core files shipped with Mbed:
   ```
-  mkdir -p ~/TensorFlow/tensorflow/lite/micro/micro/tools/make/download/cmsis/CMSIS/Core/Include
-  cp ./mbed-os/cmsis/TARGET_CORTEX_M/*.h ~/TensorFlow/tensorflow/lite/micro/micro/tools/make/download/cmsis/CMSIS/Core/Include/
+  mkdir -p ~/TensorFlow/tensorflow/lite/micro/micro/tools/make/downloads/cmsis/CMSIS/Core/Include
+  cp ./mbed-os/cmsis/TARGET_CORTEX_M/*.h ~/TensorFlow/tensorflow/lite/micro/micro/tools/make/downloads/cmsis/CMSIS/Core/Include/
   ```
   
   Alternatively, you can also use the CMSIS Core files for Cortex-M that are shipped with a STM32CubeIDE project in `Drivers/CMSIS/Include`, 
@@ -70,7 +70,7 @@ STM32CubeIDE project see the instructions described in the follow.
   rm -r tensorflow/lite/micro/mbed
   ```
 
-* Update the definition of `__patched_SXTB16_RORn` in `tensorflow/lite/micro/tools/make/download/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c`:
+* Update the definition of `__patched_SXTB16_RORn` in `tensorflow/lite/micro/tools/make/downloads/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c`:
 
   Comment the definition of __patched_SXTB16_RORn and add below the following line:  
   `#define __patched_SXTB16_RORn(ARG1, ARG2)   __SXTB16(__ROR(ARG1, ARG2))`  
@@ -87,7 +87,7 @@ STM32CubeIDE project see the instructions described in the follow.
   in addition to the existing ones (both for C and C++ languages):
   ```
 	${ProjDirPath}/TensorFlow
-	${ProjDirPath}/TensorFlow/tensorflow/lite/micro/tools/make/download
+	${ProjDirPath}/TensorFlow/tensorflow/lite/micro/tools/make/downloads
 	${ProjDirPath}/TensorFlow/third_party/flatbuffers/include
 	${ProjDirPath}/TensorFlow/third_party/gemmlowp
 	${ProjDirPath}/TensorFlow/third_party/ruy
